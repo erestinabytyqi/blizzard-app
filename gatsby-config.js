@@ -6,5 +6,12 @@ module.exports = {
     title: `Blizzard WebSite`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+
+    // ... other plugins
+  ],
+};
