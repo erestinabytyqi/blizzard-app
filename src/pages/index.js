@@ -1,6 +1,7 @@
 import * as React from "react"
 import '../style/page.css';
 import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
 const IndexPage = () => {
   const [darkMode,setDarkMode]=React.useState('false');
 
@@ -18,10 +19,10 @@ const IndexPage = () => {
       <Navbar/>
     </div>
     <div className="hero" id="home">
-
+    <HeroSection/>
     </div>
     <div className="services_general" id="services">
-
+ 
     </div>
     <div className="about_us" id="about">
 

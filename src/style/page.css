@@ -1,40 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-
-.navbar_border{
-
-    border: 1px solid black;
+.navbar_border {
     height: fit-content;
-    width:100%;
-}
-.hero{
-
-    border:1px solid black;
-    height:100vh;
     width: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;  
+    color: white;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
 }
-.services_general{
-    border:1px solid black;
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.hero-background {
+    position: absolute;
+    top: -10px; /* Extend background slightly beyond top edge */
+    left: -10px; /* Extend background slightly beyond left edge */
+    right: -10px; /* Extend background slightly beyond right edge */
+    bottom: -10px; /* Extend background slightly beyond bottom edge */
+    background-image: url('../images/Designer1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(8px); /* Apply blur to the background */
+    z-index: 1; /* Set z-index for layering */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the background */
+    padding: 20% 5%; /* Adjust padding to position elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white; /* Text color */
+}
+
+.main-text {
+    font-size: 4rem; /* Larger text for main content */
+    font-weight: bold;
+}
+
+.sub-text {
+    font-size: 2rem; /* Smaller header size */
+    margin-top: 1rem; /* Space between main text and subtext */
+    align-self: flex-end; /* Align to the right of the left component */
+}
+
+.services_general {
     height: 200px;
     width: 100%;
 }
-.about_us{
-    border:1px solid black;
-    height:100vh;
-    width:100%;
-}
-.technologies{
-    border:1px solid black;
-    height: 400px;
-    width:100%;
-}
-.contact_us{
-    border:1px solid black;
-    height:100vh;
-    width:100%;
-}
-.footer{
-    border:1px solid black;
-    height: 400px;
-    width:100%;
 
+.about_us {
+    height: 100vh;
+    width: 100%;
+}
+
+.technologies {
+    height: 400px;
+    width: 100%;
+}
+
+.contact_us {
+    height: 100vh;
+    width: 100%;
+}
+
+.footer {
+    height: 400px;
+    width: 100%;
 }
