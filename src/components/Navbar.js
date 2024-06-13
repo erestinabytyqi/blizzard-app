@@ -1,32 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import '../style/Navbar.css'
 
-import icon from '../images/icon.png';
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      <header className="navbar fixed top-0 left-0 right-0 z-50 flex items-end justify-between pt-10  ">
-        <a href="#" className="pl-16">
-         Blizzard
+    <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <a href="#" className="pl-16">
+        Blizzard
+      </a>
+      <div className="flex justify-end items-center">
+        <a href="#home" className="mx-3">
+          Home
         </a>
-        <div className="flex justify-end items-end flex-grow pr-16 ">
-          <a href="#home" className="mx-2">
-            Home
-          </a>
-          <a href="#tech" className="mx-2">
+        <a href="#tech" className="mx-3">
           Technologies
-          </a>
-          <a href="#about" className="mx-2">
-            About 
-          </a>
-          <a href="#services" className="mx-2">
-            Services
-          </a>
-          <a href="#contact" className="mx-2">
-            Contact 
-          </a>
-        </div>
-      </header>
-    </div>
+        </a>
+        <a href="#about" className="mx-3">
+          About
+        </a>
+        <a href="#services" className="mx-3">
+          Services
+        </a>
+        <a href="#contact" className="mx-3">
+          Contact
+        </a>
+      </div>
+    </header>
   );
 }
 
