@@ -1,24 +1,22 @@
-
-import React from 'react'
-import '../style/page.css'
+import React from "react";
+import "../style/page.css";
+import { Grid, GridItem } from "@chakra-ui/react";
 function Solutions() {
   return (
-        <>
-            <div className=' flex'>
-                    <div className='main-solution h-3/5 w-4/5'>
-
-                    </div>
-                    <div className=' h-1/2 w-1/4' >
-                            <div className='nested-element-div'>
-
-                            </div>
-                            <div className='nested-element-div'>
-
-                            </div>
-                    </div>
-            </div>
-        </>
-  )
+    <>
+      <Grid
+        h="100vh"
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(5, 1fr)"
+        gap={4}
+      >
+        <GridItem rowSpan={2} colSpan={3} bg="tomato" />
+        <GridItem colSpan={2}  bg="papayawhip" />
+        <GridItem colSpan={2}  bg="papayawhip" />
+      </Grid>
+    </>
+  );
 }
 
-export default Solutions
+export default Solutions;
+
