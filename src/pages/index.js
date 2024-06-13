@@ -45,7 +45,11 @@ const IndexPage = () => {
       <div className="contact_us" id="contact">
         <ContactUs />
       </div>
-      <div className="footer dark:bg-slate-800 bg-slate-200"></div>
+      <div className="footer flex text-white ">
+        <hr />
+        <div>Blizzard inc</div>
+        <div></div>
+      </div>
     </>
   );
 };
