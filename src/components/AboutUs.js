@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ChakraProvider,Grid, GridItem } from "@chakra-ui/react";
 function AboutUs() {
   return (
     <div className='text-white'>
@@ -14,6 +14,7 @@ function AboutUs() {
 
             
         </p>
+       
     </div>
   )
 }

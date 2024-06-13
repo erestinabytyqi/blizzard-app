@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Text,ChakraProvider,Grid, GridItem  } from "@chakra-ui/react"
+
 function OurTechnologies() {
   return (
     <div className='text-white'>
@@ -14,6 +15,21 @@ function OurTechnologies() {
             ,unified by a reliabel network -the cornerstone of your digital
             transformation.
         </p>
+        <ChakraProvider>
+      <Grid
+        h="100vh"
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(5, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={1} bg="tomato" />
+        <GridItem colSpan={1} bg="papayawhip" />
+        <GridItem colSpan={1} bg="papayawhip" />
+        <GridItem colSpan={1} bg="papayawhip" />
+        <GridItem colSpan={1} bg="papayawhip" />
+      
+      </Grid>
+    </ChakraProvider>
         </div>
   )
 }
