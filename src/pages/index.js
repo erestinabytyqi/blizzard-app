@@ -36,7 +36,7 @@ const IndexPage = () => {
       {/* <div className="hero-short"></div> */}
       <div className="about_us" id="about">
         <AboutUs />
-        <AboutUsCardComponent />
+        <AboutUsCardComponent className="mt-6" />
       </div>
       <div className="hero-short"></div>
       <div className="technologies" id="tech">
