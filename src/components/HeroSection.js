@@ -1,21 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import { Button } from "@chakra-ui/react";
 function HeroSection() {
   return (
     <div className="hero">
-    <div className="hero-background"></div>
-    <div className="hero-content">
-      <div className="main-text">
-        Effortless Connections,
-        <br />
-        Limitless Possibilities
-      </div>
-      <div className="sub-text">
-        Securing the Digital Pathways
+      <div className="hero-background"></div>
+      <div className="hero-content">
+        <div className="main-text">
+          Effortless Connections,
+          <br />
+          Limitless Possibilities
+        </div>
+        <div className="sub-text">Securing the Digital Pathways</div>
+        <div className="pt-8">
+          <Button colorScheme="teal" size="sm">
+            Button
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

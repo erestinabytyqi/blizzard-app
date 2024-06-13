@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+body{
+    background-color: #010107 !important;
+}
 .navbar_border {
     height: fit-content;
     width: 100%;
@@ -16,24 +18,65 @@
     width: 100%;
     overflow: hidden; /* Ensure no overflow */
 }
+.hero-short{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
 
-.hero-background {
+.hero::before {
+    content: "";
     position: absolute;
-    top: -10px; /* Extend background slightly beyond top edge */
-    left: -10px; /* Extend background slightly beyond left edge */
-    right: -10px; /* Extend background slightly beyond right edge */
-    bottom: -10px; /* Extend background slightly beyond bottom edge */
+    top: -50px; /* Extend beyond top edge */
+    left: -50px; /* Extend beyond left edge */
+    right: -50px; /* Extend beyond right edge */
+    bottom: -50px; /* Extend beyond bottom edge */
     background-image: url('../images/Designer1.png');
     background-attachment: fixed;
     background-size: cover;
-    filter: blur(8px); /* Apply blur to the background */
+    filter: blur(8px); /* Apply blur to the pseudo-element */
     z-index: 1; /* Set z-index for layering */
+}
+.hero-short::before{
+    content: "";
+    position: absolute;
+    top: -50px; /* Extend beyond top edge */
+    left: -50px; /* Extend beyond left edge */
+    right: -50px; /* Extend beyond right edge */
+    bottom: -50px; /* Extend beyond bottom edge */
+    background-image: url('../images/Designer1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(8px); /* Apply blur to the pseudo-element */
+    z-index: 1; 
+}
+.hero-short::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.5)); /* Gradient overlay to mask edges */
+    z-index: 2; 
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.5)); /* Gradient overlay to mask edges */
+    z-index: 2; /* Set z-index for layering */
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Ensure content is above the background */
-    padding: 20% 5%; /* Adjust padding to position elements */
+    z-index: 3; /* Ensure content is above the background and gradient */
+    padding: 15% 5%; /* Adjust padding to position elements */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -41,24 +84,25 @@
 }
 
 .main-text {
-    font-size: 4rem; /* Larger text for main content */
+    font-size: 3rem; /* Larger text for main content */
     font-weight: bold;
 }
 
 .sub-text {
-    font-size: 2rem; /* Smaller header size */
+    font-size: 1rem; /* Smaller header size */
     margin-top: 1rem; /* Space between main text and subtext */
-    align-self: flex-end; /* Align to the right of the left component */
+    align-self: flex-start; /* Align to the right of the left component */
 }
 
 .services_general {
-    height: 200px;
+    height: 300px;
     width: 100%;
 }
 
 .about_us {
     height: 100vh;
     width: 100%;
+
 }
 
 .technologies {
@@ -69,9 +113,36 @@
 .contact_us {
     height: 100vh;
     width: 100%;
+    background-color: white;
 }
 
 .footer {
     height: 400px;
     width: 100%;
+}
+
+.our_solution{
+    height: 100vh;
+    width: 100%; 
+}
+.main-solution{
+    width:70%;
+    height:600px;
+    background-color: yellowgreen;
+}
+.nested-element-div{
+    width:100%;
+    height: 300px;
+    background-color: aqua;
+    border-color:red;
+}
+.image-div{
+    background-color: antiquewhite;
+    width:30%;
+    height:200px
+}
+.paragraph-description{
+    width:70%;
+    height:200px;
+
 }
