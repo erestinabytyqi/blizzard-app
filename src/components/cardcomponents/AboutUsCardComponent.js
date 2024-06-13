@@ -1,43 +1,38 @@
 import React from "react";
 import {
-  Card,
-  CardBody,
-  CardFooter,
-  Image,
-  Stack,
-  Heading,
-  Text,
+  GridItem,
+  Grid,
   Button,
+  Image,
 } from "@chakra-ui/react";
 function AboutUsCardComponent() {
   return (
-    <div className="flex text-white">
-      <Card
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline" >
-        <Stack>
-          <CardBody>
-            <Heading size="md">The perfect latte</Heading>
-            <Text py="2">
-              Caffè latte is a coffee beverage of Italian origin made with
-              espresso and steamed milk.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button variant="solid" colorScheme="blue">
-              Buy Latte
-            </Button>
-          </CardFooter>
-        </Stack>
-        <Image
-          objectFit="cover"
-          maxW={{ base: "100%", sm: "200px" }}
-          src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-          alt="Caffe Latte"
-        />
-      </Card>
-    </div>
+  
+  <>
+<Grid
+  h='200px'
+  templateRows='repeat(2, 1fr)'
+  templateColumns='repeat(5, 1fr)'
+  gap={4}
+  className="flex"
+>
+  <GridItem colSpan={3}>
+    <h1 className="text-4xl pt-5 font-bold text-white pl-4">
+      Heading
+    </h1>
+    <p className="text-lg pt-5 text-gray-400">
+      Another Subheading maybe its related to the image on the left or the button below
+    </p>
+    <Button>
+      More
+    </Button>
+  </GridItem>
+  <GridItem colSpan={2}/>
+      <div>
+      <Image src="https://via.placeholder.com/300" alt="Image 4" objectFit="cover" />
+      </div>
+</Grid>
+  </>
   );
 }
 
