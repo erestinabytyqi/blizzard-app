@@ -34,9 +34,9 @@ const IndexPage = () => {
         <OurSolutions />
       </div>
       {/* <div className="hero-short"></div> */}
-      <div className="about_us" id="about">
+      <div className="about_us flex justify-end" id="about" >
         <AboutUs />
-   
+
       </div>
       <div className="hero-short"></div>
       <div className="technologies" id="tech">

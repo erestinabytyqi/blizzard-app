@@ -12,8 +12,8 @@ function HeroSection() {
         </div>
         <div className="sub-text">Securing the Digital Pathways</div>
         <div className="pt-8">
-          <Button colorScheme="teal" size="sm">
-            Button
+          <Button colorScheme="black" size="sm">
+            Show More
           </Button>
         </div>
       </div>

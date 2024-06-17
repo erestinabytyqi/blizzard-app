@@ -1,14 +1,8 @@
 import React from 'react'
 import { ChakraProvider, Grid, GridItem, Image, Box, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from '@chakra-ui/react';
-
+import cisco from '../images/cisco.jpg'
 function OurTechnologies() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [selectedImage, setSelectedImage] = React.useState('');
-
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    onOpen();
-  };
+  
 
   return (
     <div className='text-white'>
@@ -29,63 +23,49 @@ function OurTechnologies() {
         templateColumns="repeat(5, 1fr)"
         gap={4}
       >
-        <GridItem colSpan={1} bg="tomato" display="flex" justifyContent="center" alignItems="center">
+        <GridItem colSpan={1}  display="flex" justifyContent="center" alignItems="center">
           <Image 
-            src="https://via.placeholder.com/100" 
+            src={cisco}
             alt="Cisco 1" 
             cursor="pointer"
-            onClick={() => handleImageClick("https://via.placeholder.com/100")}
+
           />
         </GridItem>
-        <GridItem colSpan={1} bg="papayawhip" display="flex" justifyContent="center" alignItems="center">
+        <GridItem colSpan={1}  display="flex" justifyContent="center" alignItems="center">
           <Image 
-            src="https://via.placeholder.com/100" 
+  src={cisco}
             alt="Cisco 2" 
             cursor="pointer"
-            onClick={() => handleImageClick("https://via.placeholder.com/100")}
+
           />
         </GridItem>
-        <GridItem colSpan={1} bg="lightblue" display="flex" justifyContent="center" alignItems="center">
+        <GridItem colSpan={1} display="flex" justifyContent="center" alignItems="center">
           <Image 
-            src="https://via.placeholder.com/100" 
+  src={cisco}
             alt="Cisco 3" 
             cursor="pointer"
-            onClick={() => handleImageClick("https://via.placeholder.com/100")}
+
           />
         </GridItem>
-        <GridItem colSpan={1} bg="lightgreen" display="flex" justifyContent="center" alignItems="center">
+        <GridItem colSpan={1} display="flex" justifyContent="center" alignItems="center">
           <Image 
-            src="https://via.placeholder.com/100" 
+  src={cisco}
             alt="Cisco 4" 
             cursor="pointer"
-            onClick={() => handleImageClick("https://via.placeholder.com/100")}
+
           />
         </GridItem>
-        <GridItem colSpan={1} bg="lightcoral" display="flex" justifyContent="center" alignItems="center">
+        <GridItem colSpan={1}  display="flex" justifyContent="center" alignItems="center">
           <Image 
-            src="https://via.placeholder.com/100" 
+src={cisco}
             alt="Cisco 5" 
             cursor="pointer"
-            onClick={() => handleImageClick("https://via.placeholder.com/100")}
+
           />
         </GridItem>
       </Grid>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Selected Image</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Image src={selectedImage} alt="Selected Image" objectFit="cover" w="100%" h="100%" />
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+     
     </ChakraProvider>
         </div>
   )
