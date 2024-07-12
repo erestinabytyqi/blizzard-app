@@ -6,11 +6,10 @@ function OurTechnologies() {
 
   return (
     <div className='text-white'>
-        <h1  className='text-4xl pt-5 font-bold'>
+        <h1  className='text-4xl pt-10 font-bold pl-5'>
         OUR TECHNOLOGIES
-
         </h1>
-        <p className='pt-10 pb-10 text-xl text-gray-400'>
+        <p className='pt-10 pb-10 text-xl text-gray-400 pl-5'>
             Security and collaboration elevate our it infrastrcutre, both physical and <br/>
              virtual
             ,unified by a reliabel network -the cornerstone of your digital

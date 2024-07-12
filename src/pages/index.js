@@ -8,6 +8,7 @@ import AboutUs from "../components/AboutUs";
 import AboutUsCardComponent from "../components/cardcomponents/AboutUsCardComponent";
 import OurTechnologies from "../components/OurTechnologies";
 import ContactUs from "../components/formcomponents/ContactUs";
+import Footer from "../components/Footer";
 const IndexPage = () => {
   const [darkMode, setDarkMode] = React.useState("false");
 
@@ -45,10 +46,8 @@ const IndexPage = () => {
       <div className="contact_us" id="contact">
         <ContactUs />
       </div>
-      <div className="footer flex text-white ">
-        <hr />
-        <div>Blizzard inc</div>
-        <div></div>
+      <div className="footer  text-white ">
+      <Footer/>
       </div>
     </>
   );
