@@ -15,8 +15,6 @@ function AboutUs() {
             Security and collaboration elevate our it infrastracture,both physical and<br/>
             virtual,unified by a raliable network-the cornerstone of your digital transformation.
         </p>
-       
-
     </div>
     <br/>
     </>

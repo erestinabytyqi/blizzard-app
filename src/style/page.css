@@ -100,7 +100,6 @@ body{
 }
 
 .about_us {
-    height: 120vh;
     width: 100%;
 
 }
@@ -145,4 +144,17 @@ body{
     width:70%;
     height:200px;
 
+}
+
+.about_us_component{
+    color:white;
+    height:450px;
+    
+}
+.photo_description{
+    width: 50%;
+}
+
+.photo{
+    
 }
