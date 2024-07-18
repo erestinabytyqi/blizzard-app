@@ -1,62 +1,65 @@
-import * as React from "react";
-import "../style/page.css";
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import Introduction from "../components/Introduction";
-import OurSolutions from "../components/OurSolutions";
-import AboutUs from "../components/AboutUs";
-import AboutUsCardComponent from "../components/cardcomponents/AboutUsCardComponent";
-import OurTechnologies from "../components/OurTechnologies";
-import ContactUs from "../components/formcomponents/ContactUs";
-import Footer from "../components/Footer";
-const IndexPage = () => {
-  const [darkMode, setDarkMode] = React.useState("false");
+import React from 'react';
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { Element } from 'react-scroll';
+import HeroSection from '../components/HeroSection'
 
-  React.useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
+import AboutUs from '../components/AboutUs';
+import Navbar from '../components/Navbar';
+import OurSolution from '../components/OurSolutions'
+import ContactUs from '../components/formcomponents/ContactUs'
+import OurTechnologies from '../components/OurTechnologies';
+import Footer from '../components/Footer'
+function IndexPage() {
   return (
-    <>
-      <div className="navbar_border">
-        <Navbar />
-      </div>
-      <div className="hero" id="home">
-        <HeroSection />
-      </div>
-      <div className="services_general" id="services">
-        <Introduction />
-      </div>
-      <div className="our_solution">
-        <OurSolutions />
-      </div>
-      <div className="hero-short"></div>
-      {/* <div className="hero-short"></div> */}
-      <div className="about_us flex justify-end" id="about" >
-        <AboutUs />
-      </div>
-      <div className="hero-short"></div>
-      <div className="about_us_component ">
-        <AboutUsCardComponent/>
-      </div>
-      <div className="hero-short"></div>
-      <div className="technologies" id="tech">
-        <OurTechnologies />
-      </div>
-      <div className="contact_us" id="contact">
-        <ContactUs />
-      </div>
-      <div className="footer  text-white ">
-      <Footer/>
-      </div>
-    </>
+    <ChakraProvider>
+      <Navbar />
+      <Box pt="60px">
+        <Element name="home">
+          <Box h="auto">
+            <HeroSection/>
+          </Box>
+        </Element>
+        <Element name="about">
+          <AboutUs />
+        </Element>
+        <Element name="services">
+          <Box h="auto" >
+              <OurSolution/>
+          </Box>
+        </Element>
+      
+        <Element>
+          <Box className='hero-short'>
+
+          </Box>
+        </Element>
+        <Element name='herosection'>
+
+        </Element>
+        <Element name="tech">
+        <Box h="auto" bg="white" >
+          
+        <OurTechnologies/>
+          </Box>
+        </Element>
+        <Element>
+          <Box className='hero-short'>
+
+          </Box>
+        </Element>
+        <Element name="contact" >
+          <Box h="auto" bg="white" >
+          <ContactUs/>
+          </Box>
+        </Element>
+        <Element name="footer">
+          <Box>
+            <Footer/>
+          </Box>
+        </Element>
+      </Box>
+    </ChakraProvider>
   );
-};
+}
 
 export default IndexPage;
-
-export const Head = () => <title>Home Page</title>;

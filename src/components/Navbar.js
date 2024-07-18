@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import '../style/Navbar.css'
+import { Link as ScrollLink } from "react-scroll";
+import '../style/Navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,21 +23,21 @@ function Navbar() {
         Blizzard
       </a>
       <div className="flex justify-end items-center">
-        <a href="#home" className="mx-3">
+        <ScrollLink to="home" smooth={true} duration={500} offset={-70} className="mx-3">
           Home
-        </a>
-        <a href="#tech" className="mx-3">
-          Technologies
-        </a>
-        <a href="#about" className="mx-3">
-          About
-        </a>
-        <a href="#services" className="mx-3">
+        </ScrollLink>
+        <ScrollLink to="services" smooth={true} duration={500} offset={-70} className="mx-3">
           Services
-        </a>
-        <a href="#contact" className="mx-3">
+        </ScrollLink>
+        <ScrollLink to="about" smooth={true} duration={500} offset={-70} className="mx-3">
+          About
+        </ScrollLink>
+        <ScrollLink to="tech" smooth={true} duration={500} offset={-70} className="mx-3">
+          Technologies
+        </ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} offset={-70} className="mx-3">
           Contact
-        </a>
+        </ScrollLink>
       </div>
     </header>
   );

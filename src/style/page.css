@@ -105,12 +105,13 @@ body{
 }
 
 .technologies {
-    height: 100vh;
+    height: auto;
     width: 100%;
+    background-color: white;
 }
 
 .contact_us {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: white;
 }
@@ -121,7 +122,7 @@ body{
 }
 
 .our_solution{
-    height: 140vh;
+    height: auto;
     width: 100%; 
 }
 .main-solution{
@@ -148,7 +149,7 @@ body{
 
 .about_us_component{
     color:white;
-    height:450px;
+    height:auto;
     
 }
 .photo_description{
