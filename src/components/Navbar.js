@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import '../style/Navbar.css';
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

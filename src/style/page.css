@@ -14,7 +14,7 @@ body{
 
 .hero {
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100%;
     overflow: hidden; /* Ensure no overflow */
 }
@@ -156,6 +156,33 @@ body{
     width: 50%;
 }
 
-.photo{
-    
-}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure navbar is above other content */
+  }
+  
+  .navbar.scrolled {
+    background-color: black;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .flex {
+    display: flex;
+  }
+  
+  .navbar .mx-3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }

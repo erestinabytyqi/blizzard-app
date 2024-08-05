@@ -13,7 +13,7 @@ function IndexPage() {
   return (
     <ChakraProvider>
       <Navbar />
-      <Box pt="60px">
+      <Box>
         <Element name="home">
           <Box h="auto">
             <HeroSection/>
