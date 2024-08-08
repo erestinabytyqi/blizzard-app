@@ -15,13 +15,12 @@ function Solutions() {
   return (
     <ChakraProvider>
       <Grid
-        h="100vh"
-        templateRows="repeat(3, 1fr)"
-        templateColumns="repeat(4, 1fr)"
+        templateRows={{ base: "repeat(5, auto)", md: "repeat(3, 1fr)" }}
+        templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
         gap={4}
       >
         {/* Large item with a fixed height spanning the entire width with an image */}
-        <GridItem colSpan={4} bg="tomato" position="relative" h="300px">
+        <GridItem colSpan={{ base: 1, md: 4 }} bg="tomato" position="relative" h="300px">
           <MotionImage
             src={networkitsecurity}
             alt="Large Image"
