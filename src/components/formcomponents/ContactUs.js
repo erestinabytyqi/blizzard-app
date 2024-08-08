@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm, ValidationError } from '@formspree/react';
 import {
   ChakraProvider,
   Box,
@@ -21,6 +22,8 @@ function ContactUs() {
     message: ""
   });
 
+  const [state, handleSubmit] = useForm("xvgprkro");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -29,10 +32,9 @@ function ContactUs() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can add additional validation or processing here if needed
-  };
+  if (state.succeeded) {
+    return <Box textAlign="center" mt={10}><Text fontSize="lg">Thanks for submitting!</Text></Box>;
+  }
 
   return (
     <ChakraProvider>
@@ -50,10 +52,7 @@ function ContactUs() {
           spacing={4}
           as="form"
           onSubmit={handleSubmit}
-          method="POST"
-          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="contact" />
           <HStack
             spacing={4}
             width="full"
@@ -87,6 +86,11 @@ function ContactUs() {
               value={formData.email}
               onChange={handleChange}
             />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
           </FormControl>
           <FormControl id="message" isRequired>
             <FormLabel>Your Message</FormLabel>
@@ -97,8 +101,13 @@ function ContactUs() {
               value={formData.message}
               onChange={handleChange}
             />
+            <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+            />
           </FormControl>
-          <Button bg="black" color="white" size="lg" type="submit" width="full">
+          <Button bg="black" color="white" size="lg" type="submit" width="full" disabled={state.submitting}>
             Submit
           </Button>
         </VStack>
