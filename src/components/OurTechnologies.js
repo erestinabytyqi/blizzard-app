@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraProvider, Box, Image } from '@chakra-ui/react';
+import { ChakraProvider, Box, Image, Text, Center } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
@@ -24,7 +24,30 @@ function OurTechnologies() {
     autoplay: true,
     autoplaySpeed: 1000,
     pauseOnHover: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const imageLinks = [
@@ -39,13 +62,18 @@ function OurTechnologies() {
 
   return (
     <div className='text-black'>
-      <h1 className='text-4xl pt-10 font-bold pl-5'>
-        OUR TECHNOLOGIES
-      </h1>
-      <p className='pt-10 pb-10 text-xl text-gray-400 pl-5 pr-96'>
-      Security and collaboration elevate our IT infrastructure, both physical and virtual, unified by a reliable network – the cornerstone of your digital transformation. Our robust security measures ensure the protection of sensitive data, while fostering a collaborative environment that enhances productivity and innovation. With a network designed to support seamless communication and data exchange, your organization can achieve unparalleled efficiency and agility. This integrated approach not only safeguards your digital assets but also empowers your team to work more effectively, driving growth and success in a rapidly evolving technological landscape. By prioritizing both security and collaboration, we create a resilient and adaptive IT infrastructure that is poised to meet the challenges of today and tomorrow.</p>
       <ChakraProvider>
-        <Box pl={5} pr={5} className='pb-20 pt-20'>
+        <Center>
+          <Box w={{ base: '90%', md: '70%', lg: '50%' }} textAlign="center">
+            <Text as="h1" fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold" pt="10">
+              OUR TECHNOLOGIES
+            </Text>
+            <Text fontSize={{ base: 'md', md: 'xl' }} color="gray.400" pt="10" pb="10">
+              Security and collaboration elevate our IT infrastructure, both physical and virtual, unified by a reliable network – the cornerstone of your digital transformation.
+            </Text>
+          </Box>
+        </Center>
+        <Box p={{ base: 5, md: 10 }} className='pb-20 pt-20'>
           <Slider {...settings}>
             {imageLinks.map((image, index) => (
               <MotionBox

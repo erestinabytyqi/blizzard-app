@@ -30,7 +30,7 @@ function ContactUs() {
 
   return (
     <ChakraProvider>
-      <Box maxW="50%" mx="auto" mt={10} p={6}>
+      <Box maxW={{ base: "90%", md: "50%" }} mx="auto" mt={10} p={6}>
         <Box textAlign="left" mb={6}>
           <Heading as="h1" size="lg" mb={2}>
             Contact Us
@@ -40,7 +40,7 @@ function ContactUs() {
           </Text>
         </Box>
         <VStack spacing={4} as="form" onSubmit={handleSubmit}>
-          <HStack spacing={4} width="full">
+          <HStack spacing={4} width="full" flexDirection={{ base: "column", md: "row" }}>
             <FormControl id="firstName" isRequired>
               <FormLabel>First Name</FormLabel>
               <Input placeholder="First Name" value={formData.firstName} onChange={handleChange} />
