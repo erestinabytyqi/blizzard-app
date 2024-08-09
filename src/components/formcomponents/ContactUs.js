@@ -22,7 +22,7 @@ function ContactUs() {
     message: ""
   });
 
-  const [state, handleSubmit] = useForm("xvgprkro");
+  const [state, handleSubmit] = useForm("mqazbber");
 
   const handleChange = (e) => {
     const { name, value } = e.target;

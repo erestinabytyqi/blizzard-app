@@ -20,7 +20,7 @@ function Solutions() {
         gap={4}
       >
         {/* Large item with a fixed height spanning the entire width with an image */}
-        <GridItem colSpan={{ base: 1, md: 4 }} bg="tomato" position="relative" h="300px">
+        <GridItem colSpan={{ base: 1, md: 4 }} position="relative" h="300px">
           <MotionImage
             src={networkitsecurity}
             alt="Large Image"
@@ -38,15 +38,16 @@ function Solutions() {
             height="100%"
             bg="rgba(0, 0, 0, 0.5)"
             color="white"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            opacity={{ base: 1, md: 0 }}
+            _hover={{ opacity: 1 }}
+            transition="opacity 0.5s ease-in-out"
             display="flex"
             alignItems="center"
             justifyContent="center"
             textAlign="center"
           >
-            <Text fontSize="2xl">Network IT Security
+            <Text fontSize="2xl">
+              Network IT Security
               <br />
               <span className="text-sm text-gray-400 p-1">
                 Implementing advanced network security measures to safeguard your organization's data and assets from unauthorized access and cyber attacks.
@@ -56,7 +57,7 @@ function Solutions() {
         </GridItem>
 
         {/* Four equal square items with images */}
-        <GridItem colSpan={1} rowSpan={1} bg="papayawhip" position="relative">
+        <GridItem colSpan={1} rowSpan={1} position="relative">
           <MotionImage
             src={cloudsecurity}
             alt="Image 1"
@@ -74,15 +75,16 @@ function Solutions() {
             height="100%"
             bg="rgba(0, 0, 0, 0.5)"
             color="white"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            opacity={{ base: 1, md: 0 }}
+            _hover={{ opacity: 1 }}
+            transition="opacity 0.5s ease-in-out"
             display="flex"
             alignItems="center"
             justifyContent="center"
             textAlign="center"
           >
-            <Text fontSize="xl">Cloud Security
+            <Text fontSize="xl">
+              Cloud Security
               <br />
               <span className="text-sm text-gray-400 p-1">
                 Ensuring the security and compliance of your cloud infrastructure with robust security protocols and solutions.
@@ -91,7 +93,7 @@ function Solutions() {
           </MotionBox>
         </GridItem>
 
-        <GridItem colSpan={1} rowSpan={1} bg="papayawhip" position="relative">
+        <GridItem colSpan={1} rowSpan={1} position="relative">
           <MotionImage
             src={microsoft356}
             alt="Image 2"
@@ -109,15 +111,16 @@ function Solutions() {
             height="100%"
             bg="rgba(0, 0, 0, 0.5)"
             color="white"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            opacity={{ base: 1, md: 0 }}
+            _hover={{ opacity: 1 }}
+            transition="opacity 0.5s ease-in-out"
             display="flex"
             alignItems="center"
             justifyContent="center"
             textAlign="center"
           >
-            <Text fontSize="xl">Microsoft 365 Development
+            <Text fontSize="xl">
+              Microsoft 365 Development
               <br />
               <span className="text-sm text-gray-400 p-1">
                 Leveraging Microsoft 365 tools and platforms to enhance collaboration, productivity, and data security.
@@ -126,7 +129,7 @@ function Solutions() {
           </MotionBox>
         </GridItem>
 
-        <GridItem colSpan={1} rowSpan={1} bg="papayawhip" position="relative">
+        <GridItem colSpan={1} rowSpan={1} position="relative">
           <MotionImage
             src={cybersecurity}
             alt="Image 3"
@@ -144,15 +147,16 @@ function Solutions() {
             height="100%"
             bg="rgba(0, 0, 0, 0.5)"
             color="white"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            opacity={{ base: 1, md: 0 }}
+            _hover={{ opacity: 1 }}
+            transition="opacity 0.5s ease-in-out"
             display="flex"
             alignItems="center"
             justifyContent="center"
             textAlign="center"
           >
-            <Text fontSize="xl">Cybersecurity
+            <Text fontSize="xl">
+              Cybersecurity
               <br />
               <span className="text-sm text-gray-400 p-1">
                 Protecting your organization against cyber threats with advanced security measures and proactive monitoring.
@@ -161,7 +165,7 @@ function Solutions() {
           </MotionBox>
         </GridItem>
 
-        <GridItem colSpan={1} rowSpan={1} bg="papayawhip" position="relative">
+        <GridItem colSpan={1} rowSpan={1} position="relative">
           <MotionImage
             src={managedit}
             alt="Image 4"
@@ -179,15 +183,16 @@ function Solutions() {
             height="100%"
             bg="rgba(0, 0, 0, 0.5)"
             color="white"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            opacity={{ base: 1, md: 0 }}
+            _hover={{ opacity: 1 }}
+            transition="opacity 0.5s ease-in-out"
             display="flex"
             alignItems="center"
             justifyContent="center"
             textAlign="center"
           >
-            <Text fontSize="xl">Managed IT Services
+            <Text fontSize="xl">
+              Managed IT Services
               <br />
               <span className="text-sm text-gray-400 p-1">
                 Providing comprehensive IT management and support to optimize your organization's performance and efficiency.

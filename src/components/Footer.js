@@ -32,8 +32,10 @@ const Footer = () => {
         </Box>
         <Box flex="1" mt={{ base: 4, md: 0 }} textAlign="center">
           <Text>
-            This is a paragraph on the far right side. You can add any information here, such as a company slogan, mission statement, or any other relevant text.
-          </Text>
+
+
+          Connecting Lives, Engineering Futures:<br/><b> Your Tech Companion</b>
+         </Text>
         </Box>
       </Flex>
     </Box>
